@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -43,6 +42,11 @@ class MainActivity : AppCompatActivity() {
         val buttonClick = findViewById<Button>(R.id.button)
         buttonClick.setOnClickListener {
             val intent = Intent(this, AirmeActivity::class.java)
+            startActivity(intent)
+        }
+        val buttonClick2 = findViewById<Button>(R.id.button3)
+        buttonClick2.setOnClickListener {
+            val intent = Intent(this, WebView2::class.java)
             startActivity(intent)
         }
     }
